@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=yes" />设置viewport，适应移动设备的显示宽度-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes"/><!--隐藏safari导航栏及工具栏-->
+		<meta property="qc:admins" content="13666753740606375" />
+		<meta property="wb:webmaster" content="02d1e0af77e62d70" />
+		<title>设置指引</title>
+		<link rel="stylesheet" type="text/css" href="css/wcss.css" />
+	</head>
+	<body>
+		<div class="phone_index">	
+				<div class="load-content">
+					<ul class="in-main">
+						<li><img src="img/pic1.jpg"></li>
+						<li><img src="img/pic2.jpg"></li>
+						<li><img src="img/pic3.jpg"></li>
+						<li><img src="img/pic4.jpg"></li>
+						<li><img src="img/pic5.jpg"></li>
+					</ul>
+					<a href= "# " onclick=doChangeURL()>直接前往设置</a>
+				</div>
+
+			</div>
+		</div>
+		
+		<!--弹框 S-->
+		<div class="bomb-wrap bomb-wrapp">
+			<div class="bomb-box">
+				<div class="bomb-mian">
+					<img src="img/install-logo.png" />
+					<span>钱富宝是企业级应用，<i class="set-ios9">ios9</i> 的小伙伴需要设置后才能打开</span>
+					<a class="install-btn" >查看设置方法</a>
+				</div>
+			</div>
+		</div>
+		<!--弹框 E-->
+		<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+		<script src="js/wjs.js" type="text/javascript"></script>
+		<script type="text/javascript">
+   
+  /*弹框遮罩S*/
+$(function(){
+	$('body').each(function(){
+		$('body').addClass('bomb-fiexd');
+	});
+	
+  	$('.install-btn').click(function(){
+  		$('.bomb-wrap').hide();
+  		$('body').removeClass('bomb-fiexd');
+  	});
+  })
+/*弹框遮罩E*/
+function doChangeURL(){ 
+window.location.href= "prefs:root=General&path=ManagedConfigurationList "; 
+}
+
+		</script>
+	</body>
+</html>

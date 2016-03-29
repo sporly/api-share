@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=yes" />设置viewport，适应移动设备的显示宽度-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes"/><!--隐藏safari导航栏及工具栏-->
+		<meta property="qc:admins" content="13666753740606375" />
+		<meta property="wb:webmaster" content="02d1e0af77e62d70" />
+		<title>分享</title>
+		<script src='js/jquery-1.9.1.min.js' type="text/javascript"></script>
+		<script src='js/wjs.js' type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="css/wcss.css" />
+	</head>
+	<body>
+		<div class="phone_index">
+			<div class="share-header">
+				<div class="marque" id="demo">
+				    <ul id="demo1">
+				        <li>恭喜用户<span>158****2548</span>获得手机流量20M</li>
+				        <li>恭喜用户<span>158****2548</span>获得手机流量20M</li>
+				    </ul>
+				    <div id="demo2"></div>
+				</div>
+				<div class="logo-box">
+					<div class="logo-main">
+						<a href="javascript:;" class="logo"></a>
+					</div>
+				</div>
+			</div>
+			<div class="share-content">
+				<div class="content-top">
+				     <!--<img src="img/share-bg.jpg">-->
+				     <div class="txt">
+				     	您的好友 <span class="cr">印度阿三</span><br/>
+				     	抢到了<b>20M</b>流量红包
+				     </div>
+				</div>
+				<form class="content-form">
+					<div class="input-wrap">
+					     <div class="input-box">
+					          <label class="txt">手机号</label>
+					          <div class="input-inbox"><input type="text"/></div>
+					     </div>
+					     <label class="err"></label>
+				     </div>
+				     <div class="input-wrap">
+					     <div class="input-box">
+					          <label class="txt">短信验证码</label>
+					          <div class="input-inbox"><input type="text"/></div>
+					          <button class="dm-get-btn">获取验证码</button>
+					     </div>
+					     <label class="err"></label>
+				     </div>
+				     <div class="input-wrap">
+					     <div class="input-box">
+					          <label class="txt">登录密码</label>
+					          <div class="input-inbox"><input type="text"/></div>
+					     </div>
+					     <label class="err"></label>
+				     </div>
+				     <div class="service">同意<span>《钱富宝服务协议》</span></div>
+				     <div class="share-btn">
+							<button>
+								确定提现
+							</button>
+					</div>
+				</form>
+			</div>
+			<div class="share-footer">
+				<div class="active-regular">
+					<div class="title"> 活动规则</div>
+					<div class="content">
+						<p>1. 活动期间每个用户最多获得1次抽奖机会；</p>
+
+						<p>2. 活动期间共计送出流量10万兆，赠完即止；</p>
+						
+						<p>3. 号码处于欠费停机等异常状态的、手机号未进行实名认证的、已经注册过钱富宝的用户均不能参与活动；</p>
+						
+						<p>4. 中奖后须进行流量兑换，否则视为流量领取不成功，可进行重新抽奖；</p>
+						
+						<p>5. 活动官方客服QQ：2944983890，客服联系电话：4006071818；</p>
+						
+						<p>6. 本活动最终解释权归深圳国控股权投资基金管理有限公司所有。</p>
+					</div>
+				</div>
+			</div>
+            
+			</div>
+		</div>
+<script>
+    var speed=60
+    var demo=document.getElementById("demo");
+    var demo2=document.getElementById("demo2");
+    var demo1=document.getElementById("demo1");
+    demo2.innerHTML=demo1.innerHTML
+    function Marquee(){
+        console.log(demo2.offsetTop,demo.scrollTop,demo1.offsetHeight,demo.scrollTop);
+        if(demo2.offsetTop-demo.scrollTop<=0)
+            demo.scrollTop-=demo1.offsetHeight;
+        else{
+            demo.scrollTop++
+        }
+    }
+    var MyMar=setInterval(Marquee,speed)
+    demo.onmouseover=function() {clearInterval(MyMar)}
+    demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
+
+
+
+</script>
+	</body>
+</html>
